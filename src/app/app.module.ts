@@ -3,10 +3,10 @@ import { NgModule } from '@angular/core';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { FormsModule } from '@angular/forms';
 
-import { NgxDatatableModule } from '@swimlane/ngx-datatable';
-
 
 import { AppComponent } from './app.component';
+
+import { LeaderboardModule } from 'app/leaderboard/leaderboard.module';
 
 @NgModule({
   declarations: [
@@ -15,8 +15,8 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     FormsModule,
-    InMemoryWebApiModule,
-    NgxDatatableModule
+    LeaderboardModule,
+    InMemoryWebApiModule
   ],
   providers: [],
   bootstrap: [AppComponent]

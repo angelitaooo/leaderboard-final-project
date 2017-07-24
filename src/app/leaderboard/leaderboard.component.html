@@ -1,0 +1,24 @@
+<div>
+  <h3>
+    Client-side Search and Filtering
+    <small>
+      <a href="https://github.com/swimlane/ngx-datatable/blob/master/demo/basic/filter.component.ts" target="_blank">
+        Source
+      </a>
+    </small>
+  </h3>
+  <input
+    type='text'
+    style='padding:8px;margin:15px auto;width:30%;'
+    placeholder='Type to filter the name column...'
+    (keyup)='updateFilter($event)'
+  />
+
+
+  <app-full-table
+    [rows]="rows"
+  ></app-full-table>
+
+
+</div>
+
