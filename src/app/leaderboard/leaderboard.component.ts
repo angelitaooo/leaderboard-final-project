@@ -1,4 +1,5 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, Input } from '@angular/core';
+import {MdSlideToggleModule} from '@angular/material';
 
 @Component({
   selector: 'app-leaderboard',
@@ -6,10 +7,15 @@ import { Component, ViewChild } from '@angular/core';
   styleUrls: ['./leaderboard.component.scss']
 })
 export class LeaderboardComponent {
-
+  color = 'accent';
+  checked = false;
+  disabled = false;
+  
   rows = [];
 
   temp = [];
+
+ 
 
   constructor() {
     this.fetch((data) => {
