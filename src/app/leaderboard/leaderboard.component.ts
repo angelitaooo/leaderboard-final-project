@@ -10,12 +10,12 @@ export class LeaderboardComponent {
   color = 'accent';
   checked = false;
   disabled = false;
-  
+
   rows = [];
 
   temp = [];
 
- 
+
 
   constructor() {
     this.fetch((data) => {
@@ -49,6 +49,10 @@ export class LeaderboardComponent {
     // update the rows
     this.rows = temp;
     // Whenever the filter changes, always go back to the first page
+  }
+
+  toggleView() {
+    this.checked = !this.checked;
   }
 
 }

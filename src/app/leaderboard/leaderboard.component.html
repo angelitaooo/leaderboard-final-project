@@ -2,11 +2,11 @@
   <h3>
     Client-side Search and Filtering
     <small>
-      
+
     </small>
   </h3>
 
-  
+
   <input
     type='text'
     style='padding:8px;margin:15px auto;width:30%;'
@@ -14,7 +14,7 @@
     (keyup)='updateFilter($event)'
   />
 
-  <md-slide-toggle
+  <md-slide-toggle (change)="toggleView()"
       class="example-margin"
       [color]="color"
       [checked]="checked"
