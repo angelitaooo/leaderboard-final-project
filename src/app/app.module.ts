@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 
 import { LeaderboardModule } from 'app/leaderboard/leaderboard.module';
+import { StudentModule } from 'app/student/student.module';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { LeaderboardModule } from 'app/leaderboard/leaderboard.module';
     BrowserModule,
     FormsModule,
     LeaderboardModule,
+    StudentModule,
     InMemoryWebApiModule
   ],
   providers: [],
