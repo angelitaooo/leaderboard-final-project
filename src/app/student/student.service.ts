@@ -1,5 +1,7 @@
+import { Student } from 'app/students';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
+
 
 const data = [
   {
@@ -57,6 +59,7 @@ const data = [
 @Injectable()
 
 export class StudentService {
+studentsUrl = 'api/students';
 
   getAllStudents() {
     return data;

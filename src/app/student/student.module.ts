@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
+
+import {MdCardModule} from '@angular/material';
+
 import { StudentComponent } from 'app/student/student.component';
 import { StudentService } from 'app/student/student.service';
 
@@ -11,6 +14,7 @@ const routes: Routes = [{
 @NgModule({
   imports: [
     CommonModule,
+    MdCardModule
     // RouterModule.forChild(routes)
   ],
   declarations: [StudentComponent],

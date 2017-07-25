@@ -1,13 +1,19 @@
+<md-card class="card">
+  <md-card-header>
+    <md-card-title><img class="img-detail" [src]="student?.photo" /></md-card-title>
+    <md-card-title>{{student?.fullName}}</md-card-title>
+    <md-card-subtitle>Average Grade: {{student?.averageGrade}}</md-card-subtitle>
+  </md-card-header>
+  <md-card-content>
+    <p>Delivered Homeworks: {{student?.deliveredHomeworks}}</p>
+    <p>Missing Homeworks: {{student?.missingHomeworks}}</p>
+    <p>{{student?.completed}}</p>
+    <p>Last Updated: {{student?.lastUpdated}}</p> 
+  </md-card-content>
+</md-card>
+ 
 
- <img [src]="student?.photo" />
-<h1>
-  {{student?.fullName}}
-</h1>
-<p>{{student?.averageGrade}}</p>
-<p>{{student?.deliveredHomeworks}}</p>
-<p>{{student?.missingHomeworks}}</p>
-<p>{{student?.completed}}</p>
-<p>{{student?.lastUpdated}}</p> 
+
 
 
 

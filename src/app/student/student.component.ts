@@ -4,6 +4,7 @@ import 'rxjs/add/operator/switchMap';
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { StudentService } from 'app/student/student.service';
+import {MdCardModule} from '@angular/material';
 
 @Component({
   selector: 'app-student',
