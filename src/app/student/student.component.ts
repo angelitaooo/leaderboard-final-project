@@ -1,3 +1,4 @@
+import { Students } from './../students';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/switchMap';
 import { Component, OnInit, Input } from '@angular/core';
@@ -11,7 +12,7 @@ import { StudentService } from 'app/student/student.service';
 })
 export class StudentComponent implements OnInit {
   // @Input()
-  student;
+  student: Students;
 
   constructor(
     private studentService: StudentService,
