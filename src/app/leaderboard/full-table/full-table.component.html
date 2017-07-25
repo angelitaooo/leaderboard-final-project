@@ -9,11 +9,6 @@
     [limit]="10"
     [rows]='rows'
   >
-    <ngx-datatable-column name="Id">
-       <ng-template let-value="value" ngx-datatable-cell-template>
-        {{value}}
-      </ng-template>
-    </ngx-datatable-column>
 
     <ngx-datatable-column name="Photo">
       <ng-template let-value="value" ngx-datatable-cell-template>
@@ -57,9 +52,14 @@
       </ng-template>
     </ngx-datatable-column>
 
-    <ngx-datatable-column name="">
-      <ng-template let-value="value" ngx-datatable-cell-template>
-         <button>Detail</button>
+    <ngx-datatable-column name="Id">
+       <ng-template let-value="value" ngx-datatable-cell-template>
+         <a routerLink="/student/{{value}}" routerLinkActive="active">Detail</a>
       </ng-template>
     </ngx-datatable-column>
   </ngx-datatable>
+
+
+
+
+

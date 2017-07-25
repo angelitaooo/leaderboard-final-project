@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
 
 const data = [
   {
@@ -60,4 +61,9 @@ export class StudentService {
   getAllStudents() {
     return data;
   }
+
+  getStudent(studentId) {
+    return data.find(student => student.id === studentId);
+  }
+
 }
