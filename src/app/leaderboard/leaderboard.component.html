@@ -24,14 +24,14 @@
 
 
   <app-full-table *ngIf="!checked"
-    [rows]="rows"
+    [rows]="students"
   ></app-full-table>
 
   <app-compact-table *ngIf="checked"
-    [rows]="rows">
+    [rows]="students">
   </app-compact-table>
 
-  <app-student [student]="rows[0]">
+  <app-student [student]="students[0]">
   </app-student>
 
 </div>

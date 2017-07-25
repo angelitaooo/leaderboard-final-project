@@ -11,7 +11,7 @@ export class LeaderboardComponent {
   checked = false;
   disabled = false;
 
-  rows = [];
+  students = [];
 
   temp = [];
 
@@ -23,7 +23,7 @@ export class LeaderboardComponent {
       this.temp = [...data];
 
       // push our inital complete list
-      this.rows = data;
+      this.students = data;
     });
   }
 
@@ -47,7 +47,7 @@ export class LeaderboardComponent {
     });
 
     // update the rows
-    this.rows = temp;
+    this.students = temp;
     // Whenever the filter changes, always go back to the first page
   }
 
