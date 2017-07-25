@@ -1,0 +1,65 @@
+<ngx-datatable
+    #table
+    class='material'
+    [columns]="columns"
+    [columnMode]="'force'"
+    [headerHeight]="50"
+    [footerHeight]="50"
+    [rowHeight]="'auto'"
+    [limit]="10"
+    [rows]='rows'
+  >
+
+    <ngx-datatable-column name="Photo">
+      <ng-template let-value="value" ngx-datatable-cell-template>
+         <img  width="50" [src]="value" />
+      </ng-template>
+    </ngx-datatable-column>
+
+    <ngx-datatable-column name="Full Name">
+      <ng-template let-value="value" ngx-datatable-cell-template>
+        {{value}}
+      </ng-template>
+    </ngx-datatable-column>
+
+    <ngx-datatable-column name="Average Grade">
+      <ng-template let-value="value" ngx-datatable-cell-template>
+      {{value}}
+      </ng-template>
+    </ngx-datatable-column>
+
+    <ngx-datatable-column name="Delivered Homeworks">
+        <ng-template let-value="value" ngx-datatable-cell-template>
+        {{value}}
+      </ng-template>
+    </ngx-datatable-column>
+
+    <ngx-datatable-column name="Missing Homeworks">
+        <ng-template let-value="value" ngx-datatable-cell-template>
+        {{value}}
+      </ng-template>
+    </ngx-datatable-column>
+
+    <ngx-datatable-column name="Completed">
+        <ng-template let-value="value" ngx-datatable-cell-template>
+        {{value}}
+      </ng-template>
+    </ngx-datatable-column>
+
+    <ngx-datatable-column name="Last Updated">
+        <ng-template let-value="value" ngx-datatable-cell-template>
+        {{value}}
+      </ng-template>
+    </ngx-datatable-column>
+
+    <ngx-datatable-column name="Id">
+       <ng-template let-value="value" ngx-datatable-cell-template>
+         <a routerLink="/student/{{value}}" routerLinkActive="active">Detail</a>
+      </ng-template>
+    </ngx-datatable-column>
+  </ngx-datatable>
+
+
+
+
+
