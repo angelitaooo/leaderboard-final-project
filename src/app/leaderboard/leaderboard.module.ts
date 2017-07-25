@@ -10,7 +10,7 @@ import { CompactTableComponent } from './compact-table/compact-table.component';
 import { FullTableComponent } from './full-table/full-table.component';
 import { LeaderboardComponent } from './leaderboard.component';
 
-import { StudentService } from 'app/student.service';
+import { StudentService } from 'app/student/student.service';
 const routes: Routes = [{
   path: 'leaderboard', component: LeaderboardComponent
 }];
@@ -20,8 +20,9 @@ const routes: Routes = [{
     CommonModule,
     NgxDatatableModule,
     MdSlideToggleModule,
-    StudentModule,
-    RouterModule.forChild(routes)
+    RouterModule,
+    // RouterModule.forChild(routes),
+     StudentModule
   ],
   declarations: [
     FullTableComponent,

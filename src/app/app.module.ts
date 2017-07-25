@@ -1,3 +1,5 @@
+import { LeaderboardComponent } from './leaderboard/leaderboard.component';
+import { StudentComponent } from 'app/student/student.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
@@ -11,11 +13,13 @@ import { LeaderboardModule } from 'app/leaderboard/leaderboard.module';
 import { StudentModule } from 'app/student/student.module';
 
 const routes: Routes = [
+  { path: 'student/:id', component: StudentComponent },
+  { path: 'leaderboard', component: LeaderboardComponent },
   {
     path: '',
     redirectTo: '/leaderboard',
     pathMatch: 'full'
-  }
+  },
 ]
 
 @NgModule({
