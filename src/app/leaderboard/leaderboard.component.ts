@@ -1,4 +1,4 @@
-import { Students } from './../students';
+import { Student } from './../students';
 import { Component, ViewChild, Input } from '@angular/core';
 import {MdSlideToggleModule} from '@angular/material';
 import { StudentService } from 'app/student/student.service';
@@ -12,7 +12,7 @@ export class LeaderboardComponent {
   checked = false;
   disabled = false;
 
-  students: Students[] = [];
+  students: Student[] = [];
 
   temp = [];
 
