@@ -1,6 +1,6 @@
 import { Component, ViewChild, Input } from '@angular/core';
 import {MdSlideToggleModule} from '@angular/material';
-
+import { StudentService } from 'app/student.service';
 @Component({
   selector: 'app-leaderboard',
   templateUrl: './leaderboard.component.html',
@@ -17,25 +17,12 @@ export class LeaderboardComponent {
 
 
 
-  constructor() {
-    this.fetch((data) => {
-      // cache our list
-      this.temp = [...data];
+  constructor(private studentService: StudentService) {
+    // cache our list
+    this.temp = [...this.studentService.getAllStudents()];
 
-      // push our inital complete list
-      this.students = data;
-    });
-  }
-
-  fetch(cb) {
-    const req = new XMLHttpRequest();
-    req.open('GET', `assets/data/students.json`);
-
-    req.onload = () => {
-      cb(JSON.parse(req.response));
-    };
-
-    req.send();
+    // push our inital complete list
+    this.students = this.studentService.getAllStudents();
   }
 
   updateFilter(event) {

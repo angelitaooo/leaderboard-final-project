@@ -1,4 +1,6 @@
-[
+import { Injectable } from '@angular/core';
+
+const data = [
   {
     "id": 1,
     "fullName": "Angela Ordonez",
@@ -49,4 +51,13 @@
     "completed": false,
     "lastUpdated": "2017-07-23T22:22:09.981Z"
   }
-]
+];
+
+@Injectable()
+
+export class StudentService {
+
+  getAllStudents() {
+    return data;
+  }
+}

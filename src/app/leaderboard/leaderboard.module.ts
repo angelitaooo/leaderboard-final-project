@@ -10,6 +10,7 @@ import { CompactTableComponent } from './compact-table/compact-table.component';
 import { FullTableComponent } from './full-table/full-table.component';
 import { LeaderboardComponent } from './leaderboard.component';
 
+import { StudentService } from 'app/student.service';
 const routes: Routes = [{
   path: 'leaderboard', component: LeaderboardComponent
 }];
@@ -27,6 +28,7 @@ const routes: Routes = [{
     LeaderboardComponent,
     CompactTableComponent
   ],
-  exports: [LeaderboardComponent]
+  exports: [LeaderboardComponent],
+  providers: [StudentService]
 })
 export class LeaderboardModule {}
