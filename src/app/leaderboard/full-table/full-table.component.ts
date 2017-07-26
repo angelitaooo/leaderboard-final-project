@@ -11,7 +11,7 @@ export class FullTableComponent implements OnInit {
   columns = [
     { prop: 'id' },
     { prop: 'photo' },
-    { prop: 'fullprop' },
+    { prop: 'fullname' },
     { prop: 'averageGrade' },
     { prop: 'Delivered Homeworks' },
     { prop: 'missingHomeworks' },

@@ -16,8 +16,6 @@ export class LeaderboardComponent {
 
   temp = [];
 
-
-
   constructor(private studentService: StudentService) {
     // cache our list
     this.studentService

@@ -15,6 +15,7 @@ import { LeaderboardModule } from 'app/leaderboard/leaderboard.module';
 import { StudentModule } from 'app/student/student.module';
 
 
+
 const routes: Routes = [
   { path: 'student/new', component: CreateStudentComponent },
   { path: 'student/:id', component: StudentComponent },
