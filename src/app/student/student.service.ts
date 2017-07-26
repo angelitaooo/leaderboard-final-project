@@ -30,9 +30,31 @@ export class StudentService {
     .do(student => console.log(student));
   }
 
-  delete(studentId: number){
+  delete(studentId: number) {
     const url = `${this.studentsUrl}/${studentId}`;
     return this.http.delete(url, {headers: this.headers});
   }
 
+  update(studentData) {
+    const url = `${this.studentsUrl}/${studentData.id}`;
+
+    return this.http
+    .put(url, JSON.stringify(studentData), { headers: this.headers })
+    .map(response => response);
+
+  }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
