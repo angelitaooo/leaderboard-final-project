@@ -13,7 +13,7 @@ export class FullTableComponent implements OnInit {
     { name: 'photo' },
     { name: 'fullName' },
     { name: 'averageGrade' },
-    { name: 'deliveredHomeworks' },
+    { name: 'Delivered Homeworks' },
     { name: 'missingHomeworks' },
     { name: 'completed' },
     { name: 'lastUpdated' }
