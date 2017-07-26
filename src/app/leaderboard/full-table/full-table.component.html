@@ -50,7 +50,7 @@
 
     <ngx-datatable-column name="Last Updated">
         <ng-template let-value="value" ngx-datatable-cell-template>
-        {{value}}
+        {{value | date:'medium' }}
       </ng-template>
     </ngx-datatable-column>
 

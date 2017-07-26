@@ -10,13 +10,13 @@ import {DatatableComponent} from '@swimlane/ngx-datatable';
 export class FullTableComponent implements OnInit {
   columns = [
     { prop: 'id' },
-    { name: 'photo' },
-    { name: 'fullName' },
-    { name: 'averageGrade' },
-    { name: 'Delivered Homeworks' },
-    { name: 'missingHomeworks' },
-    { name: 'completed' },
-    { name: 'lastUpdated' }
+    { prop: 'photo' },
+    { prop: 'fullprop' },
+    { prop: 'averageGrade' },
+    { prop: 'Delivered Homeworks' },
+    { prop: 'missingHomeworks' },
+    { prop: 'completed' },
+    { prop: 'lastUpdated' }
   ];
 
   @Input()

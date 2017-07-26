@@ -32,7 +32,7 @@ student: Student = new Student();
     const newDate = new Date();
 
     this.student.completed = false;
-    this.student.photo = 'http://www.clinicajoaquimmira.com/zArchives/Photos/Staff/c58f5920458ea458d7772d3b4011129a.png?width=220&height=220&crop=auto';
+    this.student.photo = 'https://api.adorable.io/avatars/426';
     this.student.lastUpdated = newDate.toString();
 
     this.studentService

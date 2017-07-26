@@ -5,7 +5,7 @@ export class InMemoryDataService implements InMemoryDbService {
      {
     id: 1,
     fullName: "Angela Ordonez",
-    photo: "http://www.clinicajoaquimmira.com/zArchives/Photos/Staff/c58f5920458ea458d7772d3b4011129a.png?width=220&height=220&crop=auto",
+    photo: "https://api.adorable.io/avatars/420",
     averageGrade: 5,
     deliveredHomeworks: 6,
     missingHomeworks: 0,
@@ -15,7 +15,7 @@ export class InMemoryDataService implements InMemoryDbService {
   {
     id: 2,
     fullName: "Angela Ordonez",
-    photo: "http://www.clinicajoaquimmira.com/zArchives/Photos/Staff/c58f5920458ea458d7772d3b4011129a.png?width=220&height=220&crop=auto",
+    photo: "https://api.adorable.io/avatars/421",
     averageGrade: 5,
     deliveredHomeworks: 6,
     missingHomeworks: 0,
@@ -25,7 +25,7 @@ export class InMemoryDataService implements InMemoryDbService {
   {
     id: 3,
     fullName: "Juan Herrera",
-    photo: "http://www.clinicajoaquimmira.com/zArchives/Photos/Staff/c58f5920458ea458d7772d3b4011129a.png?width=220&height=220&crop=auto",
+    photo: "https://api.adorable.io/avatars/422",
     averageGrade: 4,
     deliveredHomeworks: 3,
     missingHomeworks: 3,
@@ -35,7 +35,7 @@ export class InMemoryDataService implements InMemoryDbService {
   {
     id: 4,
     fullName: "Laura Ciro",
-    photo: "http://www.clinicajoaquimmira.com/zArchives/Photos/Staff/c58f5920458ea458d7772d3b4011129a.png?width=220&height=220&crop=auto",
+    photo: "https://api.adorable.io/avatars/423",
     averageGrade: 2,
     deliveredHomeworks: 4,
     missingHomeworks: 2,
@@ -45,7 +45,7 @@ export class InMemoryDataService implements InMemoryDbService {
   {
     id: 5,
     fullName: "Ricardo Rojas",
-    photo: "http://www.clinicajoaquimmira.com/zArchives/Photos/Staff/c58f5920458ea458d7772d3b4011129a.png?width=220&height=220&crop=auto",
+    photo: "https://api.adorable.io/avatars/424",
     averageGrade: 3,
     deliveredHomeworks: 2,
     missingHomeworks: 4,
