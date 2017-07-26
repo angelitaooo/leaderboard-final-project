@@ -1,3 +1,4 @@
+import { StatusComponent } from './../shared/status/status.component';
 import { Student } from './../students';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/switchMap';
@@ -6,6 +7,7 @@ import { Location } from '@angular/common';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { StudentService } from 'app/student/student.service';
 import {MdCardModule} from '@angular/material';
+
 
 @Component({
   selector: 'app-student',

@@ -8,6 +8,7 @@ import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import {MdSlideToggleModule} from '@angular/material';
 import { StudentModule } from 'app/student/student.module';
 import { SharedModule } from './../shared/shared.module';
+import {MdChipsModule} from '@angular/material';
 
 import { CompactTableComponent } from './compact-table/compact-table.component';
 import { FullTableComponent } from './full-table/full-table.component';
@@ -23,6 +24,7 @@ const routes: Routes = [{
     CommonModule,
     NgxDatatableModule,
     MdSlideToggleModule,
+    MdChipsModule,
     RouterModule,
     HttpModule,
     // RouterModule.forChild(routes),
