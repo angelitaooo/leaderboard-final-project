@@ -21,19 +21,23 @@
       Average Grade:
       <input
         *ngIf="editing"
-        type="text"
+        type="number"
+        min="0"
+        max="6"
         name="averageGrade"
         [ngModel]="student?.averageGrade"
         #averageGrade="ngModel"
       >
       <span *ngIf="!editing">{{student?.averageGrade}}</span>
     </p>
-  
+
     <p>
       Delivered Homeworks:
       <input
         *ngIf="editing"
-        type="text"
+        type="number"
+        min="0"
+        max="6"
         name="deliveredHomeworks"
         [ngModel]="student?.deliveredHomeworks"
         #deliveredHomeworks="ngModel"
@@ -44,9 +48,12 @@
       Missing Homeworks:
       <input
         *ngIf="editing"
-        type="text"
+        disabled
+        type="number"
+        min="0"
+        max="6"
         name="missingHomeworks"
-        [ngModel]="student?.missingHomeworks"
+        [ngModel]="6 - student?.deliveredHomeworks"
         #missingHomeworks="ngModel"
       >
       <span *ngIf="!editing">{{student?.missingHomeworks}}</span>

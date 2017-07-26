@@ -20,7 +20,7 @@
       <ng-template let-value="value" ngx-datatable-cell-template>
         {{value}}
       </ng-template>
-    </ngx-datatable-column> 
+    </ngx-datatable-column>
 
     <ngx-datatable-column name="Average Grade">
       <ng-template let-value="value" ngx-datatable-cell-template>
@@ -40,9 +40,9 @@
       </ng-template>
     </ngx-datatable-column>
 
-    <ngx-datatable-column name="Delivered Homeworks">
+    <ngx-datatable-column name="Status" prop="deliveredHomeworks">
         <ng-template let-value="value" ngx-datatable-cell-template>
-          <app-status 
+          <app-status
             [homeworkTotal]="value">
           </app-status>
       </ng-template>
@@ -54,7 +54,7 @@
       </ng-template>
     </ngx-datatable-column>
 
-    <ngx-datatable-column name="Id">
+    <ngx-datatable-column prop="id" name="View Details">
        <ng-template let-value="value" ngx-datatable-cell-template>
          <a routerLink="/student/{{value}}" routerLinkActive="active">Detail</a>
       </ng-template>

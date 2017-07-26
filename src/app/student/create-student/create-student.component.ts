@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Student } from 'app/students';
 import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/switchMap';
 import { Location } from '@angular/common';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { StudentService } from 'app/student/student.service';
-import {MdCardModule} from '@angular/material';
+import { MdCardModule } from '@angular/material';
+import 'rxjs/add/operator/switchMap';
 
 @Component({
   selector: 'app-create-student',
@@ -13,7 +13,7 @@ import {MdCardModule} from '@angular/material';
   styleUrls: ['./create-student.component.scss']
 })
 export class CreateStudentComponent implements OnInit {
-student: Student = new Student();
+  student: Student = new Student({});
 
   constructor(
     private studentService: StudentService,
@@ -31,8 +31,6 @@ student: Student = new Student();
   createStudent(formData) {
     const newDate = new Date();
 
-    this.student.completed = false;
-    this.student.photo = 'https://api.adorable.io/avatars/426';
     this.student.lastUpdated = newDate.toString();
 
     this.studentService

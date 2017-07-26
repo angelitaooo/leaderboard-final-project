@@ -3,7 +3,7 @@
 <form #formulario="ngForm">
 <md-card class="card">
     <p>
-      Full name: 
+      Full name:
       <input
         type="text"
         name="fullName"
@@ -14,7 +14,9 @@
     <p>
       Average Grade:
       <input
-        type="text"
+        type="number"
+        min="0"
+        max="6"
         name="averageGrade"
         [(ngModel)]="student.averageGrade"
         #averageGrade="ngModel"
@@ -23,25 +25,25 @@
     <p>
       Delivered Homeworks:
       <input
-        type="text"
+        type="number"
+        min="0"
+        max="6"
         name="deliveredHomeworks"
         [(ngModel)]="student.deliveredHomeworks"
         #deliveredHomeworks="ngModel"
       >
-
     </p>
     <p>
       Missing Homeworks:
       <input
-        type="text"
+        disabled
+        type="number"
+        min="0"
+        max="6"
         name="missingHomeworks"
-        [(ngModel)]="student.missingHomeworks"
+        [(ngModel)]="6 - student.deliveredHomeworks"
         #missingHomeworks="ngModel"
       >
-
-    </p>
-    <p>
-      {{student.fullName}}
     </p>
 
   <button  md-raised-button type="button" (click)="createStudent(formulario)">Save</button>
