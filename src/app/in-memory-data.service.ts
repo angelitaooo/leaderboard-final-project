@@ -10,7 +10,7 @@ export class InMemoryDataService implements InMemoryDbService {
     deliveredHomeworks: 6,
     missingHomeworks: 0,
     completed: false,
-    lastUpdated: "2017-07-23T22:22:09.981Z"
+    lastUpdated: "Tue Jul 25 2017 21:03:54 GMT-0500 (-05)"
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ export class InMemoryDataService implements InMemoryDbService {
     deliveredHomeworks: 6,
     missingHomeworks: 0,
    completed: true,
-    lastUpdated: "2017-07-23T22:22:09.981Z"
+    lastUpdated: "Tue Jul 25 2017 21:03:54 GMT-0500 (-05)"
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ export class InMemoryDataService implements InMemoryDbService {
     deliveredHomeworks: 3,
     missingHomeworks: 3,
    completed: false,
-    lastUpdated: "2017-07-23T22:22:09.981Z"
+    lastUpdated: "Tue Jul 25 2017 21:03:54 GMT-0500 (-05)"
   },
   {
     id: 4,
@@ -40,7 +40,7 @@ export class InMemoryDataService implements InMemoryDbService {
     deliveredHomeworks: 4,
     missingHomeworks: 2,
    completed: true,
-    lastUpdated: "2017-07-23T22:22:09.981Z"
+    lastUpdated: "Tue Jul 25 2017 21:03:54 GMT-0500 (-05)"
   },
   {
     id: 5,
@@ -50,7 +50,7 @@ export class InMemoryDataService implements InMemoryDbService {
     deliveredHomeworks: 2,
     missingHomeworks: 4,
    completed: false,
-    lastUpdated: "2017-07-23T22:22:09.981Z"
+    lastUpdated: "Tue Jul 25 2017 21:03:54 GMT-0500 (-05)"
   }
     ];
     return {students};

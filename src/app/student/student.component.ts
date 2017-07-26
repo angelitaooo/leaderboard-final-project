@@ -15,6 +15,7 @@ import {MdCardModule} from '@angular/material';
 export class StudentComponent implements OnInit {
   // @Input()
   student: Student;
+  editing = false;
 
   constructor(
     private studentService: StudentService,
@@ -41,4 +42,39 @@ export class StudentComponent implements OnInit {
     this.location.back();
   }
 
+  deleteStudent(studentId) {
+    this.studentService
+      .delete(+studentId)
+      .subscribe(student => {
+        this.location.back();
+      });
+  }
+
+  editStudent(formData) {
+    if (this.editing) {
+      const newDate = new Date();
+      const newStudent = formData.value;
+      const updatedStudent = Object.assign({}, this.student, newStudent, { lastUpdated: newDate.toString() });
+
+      this.studentService
+        .update(updatedStudent)
+        .subscribe(student => {
+          this.student = updatedStudent;
+        });
+    }
+
+    this.editing = !this.editing;
+  }
+
+
 }
+
+
+
+
+
+
+
+
+
+

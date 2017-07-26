@@ -2,11 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpModule } from '@angular/http';
+import { FormsModule } from '@angular/forms';
 
 import {MdCardModule} from '@angular/material';
 
 import { StudentComponent } from 'app/student/student.component';
 import { StudentService } from 'app/student/student.service';
+import { CreateStudentComponent } from './create-student/create-student.component';
 
 
 const routes: Routes = [{
@@ -17,10 +19,11 @@ const routes: Routes = [{
   imports: [
     CommonModule,
     MdCardModule,
-    HttpModule
+    HttpModule,
+    FormsModule
     // RouterModule.forChild(routes)
   ],
-  declarations: [StudentComponent],
+  declarations: [StudentComponent, CreateStudentComponent],
   exports: [StudentComponent],
   providers: [StudentService]
 })
