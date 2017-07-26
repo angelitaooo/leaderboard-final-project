@@ -42,13 +42,9 @@
 
     <ngx-datatable-column name="Delivered Homeworks">
         <ng-template let-value="value" ngx-datatable-cell-template>
-        <!-- <completed-course [homeworkTotal]="value"></completed-course>-->
-        <div *ngIf="value === 6">
-          Completed
-        </div>
-        <div *ngIf="value < 6">
-          Not Completed
-        </div>
+          <app-status 
+            [homeworkTotal]="value">
+          </app-status>
       </ng-template>
     </ngx-datatable-column>
 

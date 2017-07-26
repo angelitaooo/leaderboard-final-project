@@ -27,9 +27,11 @@
       </ng-template>
     </ngx-datatable-column>
 
-    <ngx-datatable-column name="Completed">
+    <ngx-datatable-column name="Delivered Homeworks">
         <ng-template let-value="value" ngx-datatable-cell-template>
-        {{value}}
+          <app-status 
+            [homeworkTotal]="value">
+          </app-status>
       </ng-template>
     </ngx-datatable-column>
 

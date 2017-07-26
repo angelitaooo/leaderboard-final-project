@@ -1,6 +1,5 @@
 <form #formulario="ngForm">
 <md-card class="card">
-  <button (click)="goBack()">Back</button>
   <md-card-header>
     <md-card-title>
       <img class="img-detail" [src]="student?.photo" />
@@ -53,9 +52,6 @@
       <span *ngIf="!editing">{{student?.missingHomeworks}}</span>
     </p>
     <p>
-      {{student?.completed}}
-    </p>
-    <p>
       Last Updated:
       {{student?.lastUpdated}}
     </p>
@@ -64,6 +60,9 @@
   <button type="button" (click)="deleteStudent(student?.id)">Delete</button>
 
   <button type="button" (click)="editStudent(formulario)">{{editing ? 'Save': 'Edit'}}</button>
+
+  <button (click)="goBack()">Back</button>
+
 
 </md-card>
 </form>
