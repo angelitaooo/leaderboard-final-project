@@ -1,6 +1,7 @@
+import { Student } from './../students';
 import { Component, ViewChild, Input } from '@angular/core';
 import {MdSlideToggleModule} from '@angular/material';
-import { StudentService } from 'app/student.service';
+import { StudentService } from 'app/student/student.service';
 @Component({
   selector: 'app-leaderboard',
   templateUrl: './leaderboard.component.html',
@@ -11,7 +12,7 @@ export class LeaderboardComponent {
   checked = false;
   disabled = false;
 
-  students = [];
+  students: Student[] = [];
 
   temp = [];
 
@@ -19,10 +20,14 @@ export class LeaderboardComponent {
 
   constructor(private studentService: StudentService) {
     // cache our list
-    this.temp = [...this.studentService.getAllStudents()];
+    this.studentService
+      .getAllStudents()
+      .subscribe(students => {
+        this.temp = [...students];
 
-    // push our inital complete list
-    this.students = this.studentService.getAllStudents();
+        // push our inital complete list
+        this.students = students;
+      });
   }
 
   updateFilter(event) {

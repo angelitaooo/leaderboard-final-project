@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpModule } from '@angular/http';
 
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import {MdSlideToggleModule} from '@angular/material';
@@ -10,7 +11,7 @@ import { CompactTableComponent } from './compact-table/compact-table.component';
 import { FullTableComponent } from './full-table/full-table.component';
 import { LeaderboardComponent } from './leaderboard.component';
 
-import { StudentService } from 'app/student.service';
+import { StudentService } from 'app/student/student.service';
 const routes: Routes = [{
   path: 'leaderboard', component: LeaderboardComponent
 }];
@@ -20,8 +21,10 @@ const routes: Routes = [{
     CommonModule,
     NgxDatatableModule,
     MdSlideToggleModule,
-    StudentModule,
-    RouterModule.forChild(routes)
+    RouterModule,
+    HttpModule,
+    // RouterModule.forChild(routes),
+     StudentModule
   ],
   declarations: [
     FullTableComponent,
