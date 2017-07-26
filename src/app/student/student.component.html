@@ -53,7 +53,7 @@
         min="0"
         max="6"
         name="missingHomeworks"
-        [ngModel]="6 - student?.deliveredHomeworks"
+        [ngModel]="6 - formulario.value.deliveredHomeworks"
         #missingHomeworks="ngModel"
       >
       <span *ngIf="!editing">{{student?.missingHomeworks}}</span>
