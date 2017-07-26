@@ -41,4 +41,12 @@ export class StudentComponent implements OnInit {
     this.location.back();
   }
 
+  deleteStudent(studentId) {
+    this.studentService
+      .delete(+studentId)
+      .subscribe(student => {
+        this.location.back();
+      });
+  }
+
 }

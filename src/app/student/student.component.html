@@ -9,11 +9,13 @@
     <p>Delivered Homeworks: {{student?.deliveredHomeworks}}</p>
     <p>Missing Homeworks: {{student?.missingHomeworks}}</p>
     <p>{{student?.completed}}</p>
-    <p>Last Updated: {{student?.lastUpdated}}</p> 
+    <p>Last Updated: {{student?.lastUpdated}}</p>
   </md-card-content>
-  
+
 </md-card>
- 
+
+<button (click)="deleteStudent(student?.id)">Delete</button>
+
 
 
 
