@@ -8,6 +8,7 @@ import {MdCardModule} from '@angular/material';
 
 import { StudentComponent } from 'app/student/student.component';
 import { StudentService } from 'app/student/student.service';
+import { CreateStudentComponent } from './create-student/create-student.component';
 
 
 const routes: Routes = [{
@@ -22,7 +23,7 @@ const routes: Routes = [{
     FormsModule
     // RouterModule.forChild(routes)
   ],
-  declarations: [StudentComponent],
+  declarations: [StudentComponent, CreateStudentComponent],
   exports: [StudentComponent],
   providers: [StudentService]
 })

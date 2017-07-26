@@ -6,6 +6,7 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
+import { CreateStudentComponent } from 'app/student/create-student/create-student.component';
 
 
 import { AppComponent } from './app.component';
@@ -13,7 +14,9 @@ import { AppComponent } from './app.component';
 import { LeaderboardModule } from 'app/leaderboard/leaderboard.module';
 import { StudentModule } from 'app/student/student.module';
 
+
 const routes: Routes = [
+  { path: 'student/new', component: CreateStudentComponent },
   { path: 'student/:id', component: StudentComponent },
   { path: 'leaderboard', component: LeaderboardComponent },
   {

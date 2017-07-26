@@ -44,23 +44,10 @@ export class StudentService {
 
   }
 
-  save(studentData) {
+  create(studentData) {
     return this.http
       .post(this.studentsUrl, JSON.stringify(studentData), { headers: this.headers })
       .map(response => response);
   }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
