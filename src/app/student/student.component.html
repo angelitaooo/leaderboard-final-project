@@ -2,47 +2,55 @@
 <md-card class="card">
   <button (click)="goBack()">Back</button>
   <md-card-header>
-    <md-card-title><img class="img-detail" [src]="student?.photo" /></md-card-title>
+    <md-card-title>
+      <img class="img-detail" [src]="student?.photo" />
+    </md-card-title>
     <md-card-title>
       <input
+        *ngIf="editing"
         type="text"
         name="fullName"
         #fullName="ngModel"
         [ngModel]="student?.fullName"
       >
-      {{student?.fullName}}
+      <span *ngIf="!editing">
+        {{student?.fullName}}
+      </span>
     </md-card-title>
     <md-card-subtitle>
       Average Grade:
       <input
+        *ngIf="editing"
         type="text"
         name="averageGrade"
         [ngModel]="student?.averageGrade"
         #averageGrade="ngModel"
       >
-      {{student?.averageGrade}}
+      <span *ngIf="!editing">{{student?.averageGrade}}</span>
     </md-card-subtitle>
   </md-card-header>
   <md-card-content>
     <p>
       Delivered Homeworks:
       <input
+        *ngIf="editing"
         type="text"
         name="deliveredHomeworks"
         [ngModel]="student?.deliveredHomeworks"
         #deliveredHomeworks="ngModel"
       >
-      {{student?.deliveredHomeworks}}
+      <span *ngIf="!editing">{{student?.deliveredHomeworks}}</span>
     </p>
     <p>
       Missing Homeworks:
       <input
+        *ngIf="editing"
         type="text"
         name="missingHomeworks"
         [ngModel]="student?.missingHomeworks"
         #missingHomeworks="ngModel"
       >
-      {{student?.missingHomeworks}}
+      <span *ngIf="!editing">{{student?.missingHomeworks}}</span>
     </p>
     <p>
       {{student?.completed}}
@@ -55,7 +63,7 @@
 
   <button type="button" (click)="deleteStudent(student?.id)">Delete</button>
 
-  <button type="button" (click)="editStudent(formulario)">Edit</button>
+  <button type="button" (click)="editStudent(formulario)">{{editing ? 'Save': 'Edit'}}</button>
 
 </md-card>
 </form>
