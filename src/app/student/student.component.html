@@ -56,7 +56,7 @@
         [ngModel]="6 - formulario.value.deliveredHomeworks"
         #missingHomeworks="ngModel"
       >
-      <span *ngIf="!editing">{{student?.missingHomeworks}}</span>
+      <span *ngIf="!editing">{{6 - student?.deliveredHomeworks}}</span>
     </p>
     <p>
       Last Updated:

@@ -35,9 +35,9 @@
       </ng-template>
     </ngx-datatable-column>
 
-    <ngx-datatable-column name="Missing Homeworks">
+    <ngx-datatable-column prop="deliveredHomeworks" name="Missing Homeworks">
         <ng-template let-value="value" ngx-datatable-cell-template>
-        {{value}}
+        {{6 - value}}
       </ng-template>
     </ngx-datatable-column>
 
@@ -57,12 +57,7 @@
 
     <ngx-datatable-column prop="id" name="View Details">
        <ng-template let-value="value" ngx-datatable-cell-template>
-         <a routerLink="/student/{{value}}" routerLinkActive="active">Detail</a>
+         <a md-raised-button routerLink="/student/{{value}}" routerLinkActive="active">Detail</a>
       </ng-template>
     </ngx-datatable-column>
   </ngx-datatable>
-
-
-
-
-

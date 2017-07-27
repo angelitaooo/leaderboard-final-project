@@ -1,8 +1,12 @@
  <div *ngIf="homeworkTotal === 6">
-  <md-chip color="primary" selected="true">Completed</md-chip>
+  <md-chip-list>
+    <md-chip color="primary" selected="true">Completed</md-chip>
+  </md-chip-list>
 </div>
 <div *ngIf="homeworkTotal < 6">
-  <md-chip color="warn" selected="true">Not Completed</md-chip>
-</div> 
+  <md-chip-list>
+    <md-chip color="warn" selected="true">Incomplete</md-chip>
+  </md-chip-list>
+</div>
 
 

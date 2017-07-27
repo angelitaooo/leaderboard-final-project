@@ -12,9 +12,8 @@ columns = [
     { prop: 'id' },
     { name: 'photo' },
     { name: 'fullName' },
-    { name: 'averageGrade' },    
+    { name: 'averageGrade' },
     { name: 'completed' }
-    
   ];
 
   @Input()
@@ -22,10 +21,8 @@ columns = [
 
   @ViewChild(DatatableComponent) table: DatatableComponent;
 
-
   constructor() { }
 
   ngOnInit() {
   }
-
 }

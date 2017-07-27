@@ -1,11 +1,7 @@
 <div>
   <h3>
     LEADERBOARD
-    <small>
-
-    </small>
   </h3>
-
 
   <input
     type='text'
@@ -22,8 +18,7 @@
     Change view
   </md-slide-toggle>
 
-  <a routerLink="/student/new" routerLinkActive="active">New Student</a>
-
+  <a md-raised-button routerLink="/student/new" routerLinkActive="active">New Student</a>
 
   <app-full-table *ngIf="!checked"
     [rows]="students"
@@ -36,4 +31,3 @@
 </div>
 
 <router-outlet></router-outlet>
-

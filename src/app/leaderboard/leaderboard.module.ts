@@ -9,6 +9,7 @@ import {MdSlideToggleModule} from '@angular/material';
 import { StudentModule } from 'app/student/student.module';
 import { SharedModule } from './../shared/shared.module';
 import {MdChipsModule} from '@angular/material';
+import {MdButtonModule} from '@angular/material';
 
 import { CompactTableComponent } from './compact-table/compact-table.component';
 import { FullTableComponent } from './full-table/full-table.component';
@@ -18,21 +19,17 @@ import { StudentService } from 'app/student/student.service';
 
 import { HightlightDirective } from 'app/shared/hightlight.directive';
 
-const routes: Routes = [{
-  path: 'leaderboard', component: LeaderboardComponent
-}];
-
 @NgModule({
   imports: [
     CommonModule,
     NgxDatatableModule,
     MdSlideToggleModule,
     MdChipsModule,
+    MdButtonModule,
     RouterModule,
     HttpModule,
-    // RouterModule.forChild(routes),
-     StudentModule,
-     SharedModule
+    StudentModule,
+    SharedModule
   ],
   declarations: [
     FullTableComponent,
