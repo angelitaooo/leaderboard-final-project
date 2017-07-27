@@ -2,6 +2,7 @@ import { Student } from './../students';
 import { Component, ViewChild, Input } from '@angular/core';
 import {MdSlideToggleModule} from '@angular/material';
 import { StudentService } from 'app/student/student.service';
+
 @Component({
   selector: 'app-leaderboard',
   templateUrl: './leaderboard.component.html',

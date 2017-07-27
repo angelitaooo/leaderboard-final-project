@@ -1,11 +1,7 @@
 <div>
   <h3>
     LEADERBOARD
-    <small>
-
-    </small>
   </h3>
-
 
   <input
     type='text'
@@ -24,7 +20,6 @@
 
   <a md-raised-button routerLink="/student/new" routerLinkActive="active">New Student</a>
 
-
   <app-full-table *ngIf="!checked"
     [rows]="students"
   ></app-full-table>
@@ -36,4 +31,3 @@
 </div>
 
 <router-outlet></router-outlet>
-

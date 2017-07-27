@@ -19,10 +19,6 @@ import { StudentService } from 'app/student/student.service';
 
 import { HightlightDirective } from 'app/shared/hightlight.directive';
 
-const routes: Routes = [{
-  path: 'leaderboard', component: LeaderboardComponent
-}];
-
 @NgModule({
   imports: [
     CommonModule,
@@ -32,9 +28,8 @@ const routes: Routes = [{
     MdButtonModule,
     RouterModule,
     HttpModule,
-    // RouterModule.forChild(routes),
-     StudentModule,
-     SharedModule
+    StudentModule,
+    SharedModule
   ],
   declarations: [
     FullTableComponent,
