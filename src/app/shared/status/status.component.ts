@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Student } from 'app/students';
-import {MdChipsModule} from '@angular/material';
+import { MdChipsModule } from '@angular/material';
 
 @Component({
   selector: 'app-status',
