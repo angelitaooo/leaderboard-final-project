@@ -11,6 +11,6 @@ import { HightlightDirective } from './hightlight.directive';
     MdChipsModule
   ],
   declarations: [StatusComponent, HightlightDirective],
-  exports: [StatusComponent]
+  exports: [StatusComponent, HightlightDirective]
 })
 export class SharedModule { }

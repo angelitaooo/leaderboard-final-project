@@ -9,10 +9,9 @@
     [limit]="10"
     [rows]='rows'
   >
-
     <ngx-datatable-column name="Photo">
       <ng-template let-value="value" ngx-datatable-cell-template>
-         <img  width="50" [src]="value" />
+         <img  width="50" [src]="value"/>
       </ng-template>
     </ngx-datatable-column>
 
@@ -24,7 +23,9 @@
 
     <ngx-datatable-column name="Average Grade">
       <ng-template let-value="value" ngx-datatable-cell-template>
-      {{value}}
+      <div [appHightlight]="value">
+        {{value}}
+      </div>
       </ng-template>
     </ngx-datatable-column>
 

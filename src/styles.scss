@@ -8,3 +8,17 @@
 body {
   font-family: sans-serif;
 }
+
+.blink {
+  animation: blinker 2s linear infinite;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+    background-color: #89FF3A;
+  }
+}
