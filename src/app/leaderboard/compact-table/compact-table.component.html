@@ -27,15 +27,15 @@
       </ng-template>
     </ngx-datatable-column>
 
-    <ngx-datatable-column name="Delivered Homeworks">
+    <ngx-datatable-column name="Status" prop="Delivered Homeworks">
         <ng-template let-value="value" ngx-datatable-cell-template>
-          <app-status 
+          <app-status
             [homeworkTotal]="value">
           </app-status>
       </ng-template>
     </ngx-datatable-column>
 
-    <ngx-datatable-column name="Id">
+    <ngx-datatable-column prop="Id" name="View details">
        <ng-template let-value="value" ngx-datatable-cell-template>
          <a routerLink="/student/{{value}}" routerLinkActive="active">Detail</a>
       </ng-template>

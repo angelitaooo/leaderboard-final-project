@@ -9,14 +9,13 @@
     [limit]="10"
     [rows]='rows'
   >
-
     <ngx-datatable-column name="Photo">
       <ng-template let-value="value" ngx-datatable-cell-template>
-         <img  width="50" [src]="value" />
+         <img  width="50" [src]="value"/>
       </ng-template>
     </ngx-datatable-column>
 
-    <ngx-datatable-column name="Full Name">
+     <ngx-datatable-column name="Full Name">
       <ng-template let-value="value" ngx-datatable-cell-template>
         {{value}}
       </ng-template>
@@ -24,7 +23,9 @@
 
     <ngx-datatable-column name="Average Grade">
       <ng-template let-value="value" ngx-datatable-cell-template>
-      {{value}}
+      <div [appHightlight]="value">
+        {{value}}
+      </div>
       </ng-template>
     </ngx-datatable-column>
 
@@ -40,9 +41,9 @@
       </ng-template>
     </ngx-datatable-column>
 
-    <ngx-datatable-column name="Delivered Homeworks">
+    <ngx-datatable-column name="Status" prop="deliveredHomeworks">
         <ng-template let-value="value" ngx-datatable-cell-template>
-          <app-status 
+          <app-status
             [homeworkTotal]="value">
           </app-status>
       </ng-template>
@@ -50,11 +51,11 @@
 
     <ngx-datatable-column name="Last Updated">
         <ng-template let-value="value" ngx-datatable-cell-template>
-        {{value}}
+        {{value | date:'medium' }}
       </ng-template>
     </ngx-datatable-column>
 
-    <ngx-datatable-column name="Id">
+    <ngx-datatable-column prop="id" name="View Details">
        <ng-template let-value="value" ngx-datatable-cell-template>
          <a routerLink="/student/{{value}}" routerLinkActive="active">Detail</a>
       </ng-template>

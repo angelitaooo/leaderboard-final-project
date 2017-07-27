@@ -14,6 +14,7 @@ import { AppComponent } from './app.component';
 import { LeaderboardModule } from 'app/leaderboard/leaderboard.module';
 import { StudentModule } from 'app/student/student.module';
 
+import {HightlightDirective} from 'app/shared/hightlight.directive';
 
 const routes: Routes = [
   { path: 'student/new', component: CreateStudentComponent },

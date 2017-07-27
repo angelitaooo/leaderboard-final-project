@@ -15,6 +15,9 @@ import { FullTableComponent } from './full-table/full-table.component';
 import { LeaderboardComponent } from './leaderboard.component';
 
 import { StudentService } from 'app/student/student.service';
+
+import { HightlightDirective } from 'app/shared/hightlight.directive';
+
 const routes: Routes = [{
   path: 'leaderboard', component: LeaderboardComponent
 }];

@@ -1,10 +1,11 @@
 <form #formulario="ngForm">
 <md-card class="card">
-  <md-card-header>
+    <h1>Student Detail</h1>
     <md-card-title>
       <img class="img-detail" [src]="student?.photo" />
     </md-card-title>
     <md-card-title>
+      Full Name:
       <input
         *ngIf="editing"
         type="text"
@@ -16,24 +17,27 @@
         {{student?.fullName}}
       </span>
     </md-card-title>
-    <md-card-subtitle>
+    <p>
       Average Grade:
       <input
         *ngIf="editing"
-        type="text"
+        type="number"
+        min="0"
+        max="6"
         name="averageGrade"
         [ngModel]="student?.averageGrade"
         #averageGrade="ngModel"
       >
       <span *ngIf="!editing">{{student?.averageGrade}}</span>
-    </md-card-subtitle>
-  </md-card-header>
-  <md-card-content>
+    </p>
+
     <p>
       Delivered Homeworks:
       <input
         *ngIf="editing"
-        type="text"
+        type="number"
+        min="0"
+        max="6"
         name="deliveredHomeworks"
         [ngModel]="student?.deliveredHomeworks"
         #deliveredHomeworks="ngModel"
@@ -44,24 +48,26 @@
       Missing Homeworks:
       <input
         *ngIf="editing"
-        type="text"
+        disabled
+        type="number"
+        min="0"
+        max="6"
         name="missingHomeworks"
-        [ngModel]="student?.missingHomeworks"
+        [ngModel]="6 - formulario.value.deliveredHomeworks"
         #missingHomeworks="ngModel"
       >
       <span *ngIf="!editing">{{student?.missingHomeworks}}</span>
     </p>
     <p>
       Last Updated:
-      {{student?.lastUpdated}}
+      {{student?.lastUpdated | date:'medium' }}
     </p>
-  </md-card-content>
 
-  <button type="button" (click)="deleteStudent(student?.id)">Delete</button>
+  <button md-raised-button type="button" (click)="deleteStudent(student?.id)">Delete</button>
 
-  <button type="button" (click)="editStudent(formulario)">{{editing ? 'Save': 'Edit'}}</button>
+  <button md-raised-button type="button" (click)="editStudent(formulario)">{{editing ? 'Save': 'Edit'}}</button>
 
-  <button (click)="goBack()">Back</button>
+  <button md-raised-button (click)="goBack()">Back</button>
 
 
 </md-card>

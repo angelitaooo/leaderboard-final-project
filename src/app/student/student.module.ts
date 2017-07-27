@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
+import {MdButtonModule} from '@angular/material';
 
 
 import {MdCardModule} from '@angular/material';
@@ -23,7 +24,8 @@ const routes: Routes = [{
     MdCardModule,
     HttpModule,
     FormsModule,
-    SharedModule
+    SharedModule,
+    MdButtonModule
     // RouterModule.forChild(routes)
   ],
   declarations: [StudentComponent, CreateStudentComponent],

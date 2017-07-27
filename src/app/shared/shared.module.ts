@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {MdChipsModule} from '@angular/material';
 import { StatusComponent } from './status/status.component';
+import { HightlightDirective } from './hightlight.directive';
 
 
 @NgModule({
@@ -9,7 +10,7 @@ import { StatusComponent } from './status/status.component';
     CommonModule,
     MdChipsModule
   ],
-  declarations: [StatusComponent],
-  exports: [StatusComponent]
+  declarations: [StatusComponent, HightlightDirective],
+  exports: [StatusComponent, HightlightDirective]
 })
 export class SharedModule { }
